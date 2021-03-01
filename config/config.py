@@ -35,8 +35,6 @@ def check_dir(folder, mk_dir=True):
 
 
 def check_dirs(cfg):
-    check_dir(cfg['data_root'], mk_dir=False)
-
     check_dir(cfg['result_root'])
     check_dir(cfg['ckpt_folder'])
     check_dir(cfg['result_sub_folder'])
