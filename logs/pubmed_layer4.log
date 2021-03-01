@@ -1,0 +1,92 @@
+Using random seed:  1000
+/data/xwt/HGNN/config/config.py:21: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+Using pubmed dataset
+max degree: 172, mean degree:5.496170817061419
+----------
+Epoch 0/599
+/data/xwt/miniconda3/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:117: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+train Loss: 0.0183 Acc: 0.3333
+val Loss: 0.0022 Acc: 0.2000
+Best val Acc: 0.200000, Min val loss: 0.002197
+--------------------
+----------
+Epoch 50/599
+train Loss: 0.0080 Acc: 0.9000
+val Loss: 0.0014 Acc: 0.7440
+Best val Acc: 0.746000, Min val loss: 0.001381
+--------------------
+----------
+Epoch 100/599
+train Loss: 0.0009 Acc: 1.0000
+val Loss: 0.0014 Acc: 0.8060
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 150/599
+train Loss: 0.0003 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7820
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 200/599
+train Loss: 0.0003 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7820
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 250/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7600
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 300/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0019 Acc: 0.7740
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 350/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0019 Acc: 0.7700
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 400/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7840
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 450/599
+train Loss: 0.0001 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7820
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 500/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7740
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+----------
+Epoch 550/599
+train Loss: 0.0002 Acc: 1.0000
+val Loss: 0.0018 Acc: 0.7760
+Best val Acc: 0.808000, Min val loss: 0.001196
+--------------------
+
+Training complete in 1m 13s
+
+State dict updates 82
+Best val Acc: 0.808000
+**** Model of lowest val loss ****
+********************
+Test acc: 0.752 @Epoch-67
+********************
+**** Model of best val acc ****
+********************
+Test acc: 0.775 @Epoch-93
+********************

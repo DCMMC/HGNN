@@ -1,17 +1,4 @@
-## Hypergraph Neural Networks
-Created by Yifan Feng, Haoxuan You, Zizhao Zhang, Rongrong, Ji, Yue Gao from Xiamen University and Tsinghua University.
-
-![pipline](doc/pipline.png)
-
-### Introduction
-This work will appear in AAAI 2019. We proposed a novel framework(HGNN) for data representation learning, which could take multi-modal data and exhibit superior performance gain compared with single modal or graph-based multi-modal methods. You can also check our [paper](http://gaoyue.org/paper/HGNN.pdf) for a deeper introduction.
-
-HGNN could encode high-order data correlation in a hypergraph structure. Confronting the challenges of learning representation for complex data in real practice, we propose to incorporate such data structure in a hypergraph, which is more flexible on data modeling, especially when dealing with complex data. In this method, a hyperedge convolution operation is designed to handle the data correlation during representation learning. In this way, traditional hypergraph learning procedure can be conducted using hyperedge convolution operations efficiently. HGNN is able to learn the hidden layer representation considering the high-order data structure, which is a general framework considering the complex data correlations.
-
-In this repository, we release code and data for train a Hypergrpah Nerual Networks for node classification on ModelNet40 dataset and NTU2012 dataset. The visual objects' feature is extracted by [MVCNN(Su et al.)](http://vis-www.cs.umass.edu/mvcnn/docs/su15mvcnn.pdf) and [GVCNN(Feng et al.)](http://openaccess.thecvf.com/content_cvpr_2018/papers/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf).
-
-
-### Citation
+## Citation
 if you find our work useful in your research, please consider citing:
 
     @article{feng2018hypergraph,
@@ -21,10 +8,19 @@ if you find our work useful in your research, please consider citing:
       year={2018}
     }
 
-### Installation
-Install [Pytorch 0.4.0](https://pytorch.org/). You also need to install yaml. The code has been tested with Python 3.6, Pytorch 0.4.0 and CUDA 9.0 on Ubuntu 16.04.
+## Usage
 
-### Usage
+### Citation
+
+```bash
+python train_citation.py
+```
+
+Dependencies:
+
+* networkx==1.11
+
+### Point Cloud
 
 **Firstly, you should download the feature files of modelnet40 and ntu2012 datasets.
 Then, configure the "data_root" and "result_root" path in config/config.yaml.**
@@ -37,7 +33,7 @@ Download datasets for training/evaluation  (should be placed under "data_root")
 
 To train and evaluate HGNN for node classification:
 ```
-python train.py
+python train_pointcloud.py
 ```
 You can select the feature that contribute to construct hypregraph incidence matrix by changing the status of parameters "use_mvcnn_feature_for_structure" and "use_gvcnn_feature_for_structure" in config.yaml file. Similarly, changing the status of parameter "use_gvcnn_feature" and "use_gvcnn_feature" can control the feature HGNN feed, and both true will concatenate the mvcnn feature and gvcnn feature as the node feature in HGNN.
 
@@ -55,6 +51,3 @@ To change the experimental dataset (ModelNet40 or NTU2012)
 on_dataset: &o_d ModelNet40
 #on_dataset: &o_d NTU2012
 ```
-### License
-Our code is released under MIT License (see LICENSE file for details).
-

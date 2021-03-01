@@ -3,10 +3,13 @@
 #------------------------------------------------------------------#
 
 # (DCMMC) cora and pubmed dataset
-activate_dataset: cora
+activate_dataset: pubmed
 # gcn preprocessed cora data file directory
 citation_root: /data/xwt/HGNN/datasets/data
 add_self_loop: True
+test_time: 5
+# (DCMMC) 用于测试多层效果，最少 2
+layers: 4
 
 
 #configure feature path
