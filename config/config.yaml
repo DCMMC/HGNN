@@ -9,7 +9,7 @@ citation_root: /data/xwt/HGNN/datasets/data
 add_self_loop: True
 test_time: 5
 # (DCMMC) 用于测试多层效果，最少 2
-layers: 32
+layers: 64
 
 
 #configure feature path
